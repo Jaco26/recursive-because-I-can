@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://js.stripe.com/v3/"></script>
+    <title>Co-Giv{local}</title>
+    <!-- Angular JS -->
+    <script src="vendors/angular.js"></script>
+    <script src="vendors/angular-route.js"></script>
+    <!-- Angular Material -->
+    <link rel="stylesheet" type="text/css" href="vendors/angular-material.css">
+    <script src="vendors/angular-animate.js"></script>
+    <script src="vendors/angular-aria.js"></script>
+    <script src="vendors/angular-messages.js"></script>
+    <script src="vendors/angular-material.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <!-- Other JS Libraries -->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    
+    <!-- Custom JS -->
+    <script src="scripts/client.js"></script>
+
+    <script src="scripts/controllers/admin.controller.js"></script>
+    <script src="scripts/controllers/login.controller.js"></script>
+    <script src="scripts/controllers/stripe.controller.js"></script>
+    <script src="scripts/controllers/user.nonprofit.controller.js"></script>
+    <script src="scripts/controllers/user.profile.controller.js"></script>
+    <script src="scripts/controllers/user.static.controller.js"></script>
+    <script src="scripts/controllers/user.subscriptions.controller.js"></script>
+
+    <script src="scripts/services/feed.service.js"></script>
+    <script src="scripts/services/nonprofit.service.js"></script>
+    <script src="scripts/services/report.service.js"></script>
+    <script src="scripts/services/stripe.service.js"></script>
+    <script src="scripts/services/user.service.js"></script>
+
+    <!-- fliestack -->
+    <script type="text/javascript" src="https://static.filestackapi.com/v3/filestack.js"></script>
+
+</head>
+<body ng-app="myApp">
+    <main ng-view>
+
+    </main>
+      <!-- the status id is where fb messages go, this can be changed in the login view
+      this needs to be seperate from the view, otherwise we get errors-->
+      <!-- <div id="status"></div>
+      <div id="pic"></div> -->
+
+
+
+</body>
+</html>
