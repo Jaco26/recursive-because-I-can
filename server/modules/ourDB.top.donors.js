@@ -4,7 +4,7 @@ let result = [];
 let nonprofitIds;
 let exitCondition;
 function getTopDonors (nonprofitIdsPassedIn, res) {
-    nonprofitIds = nonprofitIdsPassedIn.split('').filter(id => Number(id) && id != 1);
+    nonprofitIds = nonprofitIdsPassedIn.split(',').filter(id => Number(id) && id != 1);
     exitCondition = nonprofitIds.length;
     recursive (res)
 }
