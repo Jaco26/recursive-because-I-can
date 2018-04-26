@@ -14,8 +14,9 @@ router.get('/donation-history/:nonprofitIds', (req, res) => {
 });
 
 // GET A LIST OF TOP DONORS
-router.get('/top-donors', (req, res) => {
-  getTopDonors(res);
+router.get('/top-donors/:nonprofitIds', (req, res) => {
+  let nonprofitIds = req.params.nonprofitIds;
+  getTopDonors(nonprofitIds, res);
 });
 
 

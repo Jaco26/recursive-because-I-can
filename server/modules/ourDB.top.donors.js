@@ -3,8 +3,8 @@ const pool = require('./pool');
 let result = [];
 let nonprofitIds;
 let exitCondition;
-function getTopDonors (res) {
-    nonprofitIds = [1, 2, 3, 4, 5, 6, 9];
+function getTopDonors (nonprofitIdsPassedIn, res) {
+    nonprofitIds = nonprofitIdsPassedIn.split('').filter(id => Number(id) && id != 1);
     exitCondition = nonprofitIds.length;
     recursive (res)
 }

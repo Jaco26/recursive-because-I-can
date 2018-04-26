@@ -57,7 +57,8 @@ myApp.service('NonprofitService', ['$http', '$location', '$route', function($htt
 
     // GET TOP DONORS
     self.getTopDonors = function () {
-      $http.get('/nonprofit/top-donors')
+      let nonprofitIds = self.allNonprofits.list.map(item => item.id);
+      $http.get(`/nonprofit/top-donors/${nonprofitIds}`)
       .then(response => {
         console.log('TOP DONORS RESPONSE ******', response.data);
 
